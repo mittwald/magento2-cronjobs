@@ -9,7 +9,7 @@
 # https://github.com/mittwald/magento2-cronjobs/issues
 
 LOCKFILE="${HOME}/tmp/cron.lock"
-PHP_BIN="$(command -v php_cli)"
+PHP_BIN="$(command -v php)"
 ABSOLUTE_PATH=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)/$(basename "${BASH_SOURCE[0]}")
 INSTALLDIR="${ABSOLUTE_PATH%/*}"
 
