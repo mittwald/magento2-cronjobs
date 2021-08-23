@@ -31,7 +31,7 @@ ${PHP_BIN} "${INSTALLDIR}/update/cron.php" >> "${INSTALLDIR}/var/log/update.cron
 
 MAGEVERSION=$( ${PHP_BIN} "${INSTALLDIR}/bin/magento" --version )
 MAGEVERSIONMINOR=$( echo ${MAGEVERSION} | awk -F'.' '{print $2}' )
-MAGEVERSIONPATCHLEVEL=$( echo ${MAGEVERSION} | awk -F'.' '{print $3}' )
+MAGEVERSIONPATCHLEVEL=$( echo ${MAGEVERSION} | awk -F'.' '{print $3}' | awk -F'-' '{print $1}' )
 
 if [ ${MAGEVERSIONMINOR} -le 3 ] && [ ${MAGEVERSIONPATCHLEVEL} -le 6 ]; then
         ${PHP_BIN} "${INSTALLDIR}/bin/magento" setup:cron:run >> "${INSTALLDIR}/var/log/setup.cron.log"
