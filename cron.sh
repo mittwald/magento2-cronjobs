@@ -26,7 +26,7 @@ else
     exit 0
 fi
 
-${PHP_BIN} "${INSTALLDIR}/bin/magento" cron:run >> "${INSTALLDIR}/var/log/setup.cron.log" 
+${PHP_BIN} "${INSTALLDIR}/bin/magento" cron:run >> "${INSTALLDIR}/var/log/magento.cron.log" 
 ${PHP_BIN} "${INSTALLDIR}/update/cron.php" >> "${INSTALLDIR}/var/log/update.cron.log"
 
 MAGEVERSION=$( ${PHP_BIN} "${INSTALLDIR}/bin/magento" --version )
