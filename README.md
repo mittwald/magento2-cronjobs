@@ -9,3 +9,4 @@ Simply move to the root of your Magento2 installation and download cron.sh from 
 
     cd /path/to/magento2
     wget https://raw.githubusercontent.com/mittwald/magento2-cronjobs/master/cron.sh
+
